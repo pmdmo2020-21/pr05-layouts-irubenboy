@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Layouts</string>
+    <string name="lblTitle">Beauty and the Beast</string>
+    <string name="lblSubtitle">March 2017 PG 127 minutes</string>
+    <string name="btnRent">Rent for 9,99 €</string>
+    <string name="btnBuy">Buy For 29,99€</string>
+    <string name="lblPencil">242 ratings</string>
+    <string name="lblFamily">Family</string>
+    <string name="lblTomatoes">71%</string>
+    <string name="similar">Similar</string>
 </resources>
