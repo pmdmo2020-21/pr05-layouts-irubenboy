@@ -7,105 +7,219 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/image"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/header"
-        />
+        >
 
-    <TextView
-        android:id="@+id/lblTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lblTitle"
-        />
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/heigh_header"
+            android:layout_margin="@dimen/margin"
+            android:src="@drawable/header"
+            android:padding="0dp"
+            android:scaleType="fitStart"/>
+    </LinearLayout>
 
-    <TextView
-        android:id="@+id/lblSubtitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/lblSubtitle"
-        />
 
-    <Button
-        android:id="@+id/btnRent"
+    <LinearLayout
+        android:id="@+id/lblFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/btnRent"
-        />
-    <Button
-        android:id="@+id/btnBuy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btnBuy"
-        />
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtnPencil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_baseline_edit_24"
-        app:tint="@color/white" />
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:orientation="horizontal">
 
-    <TextView
-        android:id="@+id/lblPencil"
+        <TextView
+            android:id="@+id/lblTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblTitle"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/bookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_bookmark"
+            android:textSize="20sp"
+            android:layout_marginLeft="@dimen/marginLeft"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblPencil"
-        />
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtnFamily"
+        <TextView
+            android:id="@+id/lblSubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblSubtitle" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/lblSecond"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_family"
-        app:tint="@color/white" />
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x"
+        android:layout_marginTop="@dimen/margin">
 
-    <TextView
-        android:id="@+id/lblFamily"
+        <Button
+            android:id="@+id/btnRent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnRent"
+            android:textSize="12sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="@dimen/margin"
+            />
+
+        <Button
+            android:id="@+id/btnBuy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btnBuy"
+            android:layout_weight="1"
+            android:textSize="12sp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblFamily"
-        />
+        android:padding="@dimen/margin_2x">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtnTomatoes"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lblThird"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/tomato"
-        app:tint="@color/white" />
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x">
 
-    <TextView
-        android:id="@+id/lblTomatoes"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabtnPencil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_edit_24"
+            android:layout_marginEnd="@dimen/margin_3x"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabtnFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_family"
+            android:layout_marginEnd="@dimen/margin_3x"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabtnTomatoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/tomato"
+            android:layout_marginEnd="@dimen/margin_3x"
+            app:tint="@color/white" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fabtnSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_similar"
+            android:layout_marginEnd="@dimen/margin_3x"
+            app:tint="@color/white" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/lblForth"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/lblTomatoes"
-        />
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x">
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabtnSimilar"
+        <TextView
+            android:id="@+id/lblPencil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblPencil"
+            android:layout_marginEnd="@dimen/margin"/>
+
+        <TextView
+            android:id="@+id/lblFamily"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblFamily"
+            android:layout_marginEnd="@dimen/margin_3x"/>
+
+        <TextView
+            android:id="@+id/lblTomatoes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/lblTomatoes"
+            android:layout_marginEnd="@dimen/margin_2x"/>
+
+        <TextView
+            android:id="@+id/lblSimilar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/similar"
+            android:layout_marginStart="@dimen/margin_2x"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_similar"
-        app:tint="@color/white" />
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x">
 
-    <TextView
-        android:id="@+id/lblSimilar"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray_divider" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/similar"/>
+        android:paddingStart="@dimen/margin_2x"
+        android:paddingEnd="@dimen/margin_2x">
 
-        <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src="@drawable/ic_baseline_edit_24"-->
-<!--        app:tint="@color/white" />-->
+        <TextView
+            android:id="@+id/lblSipnosis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin"
+            android:text="@string/sipnosis"/>
+    </LinearLayout>
+
+
+
+
+    <!-- ESTA VISTA CORRESPONDE AL BOTÓN REDONDO -->
+    <!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:src="@drawable/ic_baseline_edit_24"-->
+    <!--        app:tint="@color/white" />-->
 
     <!-- ESTA VISTA CORRESPONDE A UNA LÍNEA HORIZONTAL -->
-<!--    <View-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="2dp"-->
-<!--        android:background="@color/gray_divider" />-->
+    <!--    <View-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="2dp"-->
+    <!--        android:background="@color/gray_divider" />-->
 
 </LinearLayout>

@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="margin">8dp</dimen>
-    <dimen name="margin_2x">16dp</dimen>
+    <dimen name="margin_2x">20dp</dimen>
+    <dimen name="margin_3x">25dp</dimen>
+    <dimen name="padding_zero">0dp</dimen>
+    <dimen name="marginLeft">75dp</dimen>
+    <dimen name="heigh_header">200dp</dimen>
+    <dimen name="margin_4x">50dp</dimen>
 </resources>
