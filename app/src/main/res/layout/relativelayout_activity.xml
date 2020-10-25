@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/flRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin"
+        android:src="@drawable/header"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblTitle"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_below="@id/image"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin"/>
+
+    <TextView
+        android:id="@+id/bookmark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableStart="@drawable/ic_bookmark"
+        android:layout_below="@+id/image"
+        android:layout_alignEnd="@id/lblTitle"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/lblSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblSubtitle"
+        android:layout_below="@+id/lblTitle"
+        android:layout_alignStart="@+id/lblTitle"/>
+
+    <Button
+        android:id="@+id/btnRent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRent"
+        android:textSize="12sp"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_below="@id/lblSubtitle"
+        android:layout_alignStart="@id/lblTitle"
+        />
+
+    <Button
+        android:id="@+id/btnBuy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnBuy"
+        android:textSize="12sp"
+        android:layout_toEndOf="@id/btnRent"
+        android:layout_alignEnd="@+id/image"
+        android:layout_below="@id/lblSubtitle"
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_below="@+id/btnRent"
+        android:layout_alignStart="@+id/btnRent"
+        android:layout_alignEnd="@+id/btnBuy"
+        android:layout_marginTop="@dimen/margin_2x"
+        android:layout_marginBottom="@dimen/margin_2x"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtnPencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_edit_24"
+        android:layout_marginEnd="@dimen/margin_3x"
+        app:tint="@color/white"
+        android:layout_below="@+id/divider"
+        android:layout_alignParentLeft="true"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginStart="@dimen/margin_2x"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtnFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_family"
+        android:layout_marginEnd="@dimen/margin_3x"
+        app:tint="@color/white"
+        android:layout_below="@+id/divider"
+        android:layout_toEndOf="@id/fabtnPencil"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtnTomatoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/tomato"
+        android:layout_marginEnd="@dimen/margin_3x"
+        app:tint="@color/white"
+        android:layout_below="@+id/divider"
+        android:layout_toEndOf="@+id/fabtnFamily"
+        android:layout_marginHorizontal="@dimen/margin_2x"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabtnSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_similar"
+        android:layout_marginEnd="@dimen/margin_3x"
+        app:tint="@color/white"
+        android:layout_below="@+id/divider"
+        android:layout_toEndOf="@+id/fabtnTomatoes"
+        android:layout_marginHorizontal="@dimen/margin_2x"
+        />
+
+    <TextView
+        android:id="@+id/lblPencil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblPencil"
+        android:layout_marginStart="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_below="@+id/fabtnPencil"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/lblFamily"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblFamily"
+        android:layout_marginEnd="@dimen/margin_3x"
+        android:layout_below="@+id/fabtnFamily"
+        android:layout_toEndOf="@+id/lblPencil"
+        android:layout_marginStart="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblTomatoes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/lblTomatoes"
+        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_below="@+id/fabtnTomatoes"
+        android:layout_toEndOf="@+id/lblFamily"
+        android:layout_marginStart="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblSimilar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/similar"
+        android:layout_marginStart="@dimen/margin_2x"
+        android:layout_below="@+id/fabtnSimilar"
+        android:layout_toEndOf="@+id/fabtnTomatoes"/>
+
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/gray_divider"
+        android:layout_below="@+id/lblPencil"
+        android:layout_marginHorizontal="@dimen/margin_2x"/>
+
+    <TextView
+        android:id="@+id/lblSipnosis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:text="@string/sipnosis"
+        android:layout_below="@+id/divider2"
+        android:layout_alignStart="@id/divider2"
+        android:layout_alignEnd="@id/divider2"/>
+
+</RelativeLayout>

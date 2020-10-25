@@ -19,7 +19,7 @@
             android:layout_margin="@dimen/margin"
             android:src="@drawable/header"
             android:padding="0dp"
-            android:scaleType="fitStart"/>
+            android:scaleType="centerCrop"/>
     </LinearLayout>
 
 
