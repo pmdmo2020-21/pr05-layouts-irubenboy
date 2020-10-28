@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/flRoot"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginTop="@dimen/margin"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/heigh_header"
         android:layout_marginEnd="@dimen/margin"
-        android:layout_marginBottom="@dimen/margin"
         android:scaleType="centerCrop"
         android:src="@drawable/header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -76,8 +76,9 @@
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2dp"
+        android:layout_marginStart="24dp"
         android:layout_marginTop="@dimen/margin_2x"
-        android:layout_marginBottom="@dimen/margin_2x"
+        android:layout_marginEnd="24dp"
         android:background="@color/gray_divider"
         app:layout_constraintEnd_toEndOf="@+id/btnBuy"
         app:layout_constraintStart_toStartOf="@+id/btnRent"
@@ -89,9 +90,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/margin_2x"
-        android:layout_marginStart="@dimen/margin_2x"
         android:layout_marginTop="@dimen/margin_2x"
-        android:layout_marginEnd="@dimen/margin_3x"
         android:src="@drawable/ic_baseline_edit_24"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider"
@@ -138,10 +137,10 @@
 
     <TextView
         android:id="@+id/lblPencil"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin"
+        android:layout_width="81dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
         android:gravity="center"
         android:text="@string/lblPencil"
         app:layout_constraintStart_toStartOf="parent"
@@ -151,18 +150,19 @@
         android:id="@+id/lblFamily"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin_3x"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="12dp"
         android:text="@string/lblFamily"
         app:layout_constraintStart_toEndOf="@+id/lblPencil"
         app:layout_constraintTop_toBottomOf="@+id/fabtnFamily" />
+
 
     <TextView
         android:id="@+id/lblTomatoes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_3x"
-        android:layout_marginEnd="@dimen/margin_2x"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="12dp"
         android:text="@string/lblTomatoes"
         app:layout_constraintStart_toEndOf="@+id/lblFamily"
         app:layout_constraintTop_toBottomOf="@+id/fabtnTomatoes" />
@@ -171,26 +171,32 @@
         android:id="@+id/lblSimilar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/margin_3x"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="12dp"
         android:text="@string/similar"
-        app:layout_constraintStart_toEndOf="@+id/fabtnTomatoes"
+        app:layout_constraintStart_toEndOf="@+id/lblTomatoes"
         app:layout_constraintTop_toBottomOf="@+id/fabtnSimilar" />
-
 
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
         android:layout_height="2dp"
         android:layout_marginHorizontal="@dimen/margin_2x"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="24dp"
         android:background="@color/gray_divider"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblPencil" />
 
     <TextView
         android:id="@+id/lblSipnosis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin"
+        android:layout_width="344dp"
+        android:layout_height="78dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="24dp"
         android:text="@string/sipnosis"
         app:layout_constraintEnd_toEndOf="@id/divider2"
         app:layout_constraintStart_toStartOf="@id/divider2"
